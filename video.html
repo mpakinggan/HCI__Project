@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <ul>
-        <li><a href="text.html">Text</a></li>
-        <li><a href="image.html">Image</a></li>
-        <li><a href="video.html">Video</a></li>
-        <li><a href="table.html">Table</a></li>
-    </ul>
     <head>
         <link rel="stylesheet" href="css/style.css">
     </head>
+    <ul>
+        <li><a href="text.html">Text</a></li>
+        <li><a href="image.html">Image</a></li>
+        <li><a class="active" href="video.html">Video</a></li>
+        <li><a href="table.html">Table</a></li>
+        <li><a href="email.html">Email</a></li>
+    </ul>
     <body>
         <div id="tab-content3" class="content">
             <div class="grid-container">
-                <iframe width="560" height="315" 
-                    src="https://www.youtube.com/embed/d0tU18Ybcvk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe>
-                <iframe width="560" height="315" 
-                    src="https://www.youtube.com/embed/YvM-pnzRDYE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe>
-                <iframe width="560" height="315" 
-                    src="https://www.youtube.com/embed/eKFTSSKCzWA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe>
+                <img id="vid1" src=https://i3.ytimg.com/vi/fhWwBs-W2wk/hqdefault.jpg data="fhWwBs-W2wk" onclick="videoOn(id)"/>
+                <img id="vid2" src=https://i3.ytimg.com/vi/LHjxz_ytaVQ/hqdefault.jpg data="LHjxz_ytaVQ"onclick="videoOn(id)"/>
+                <img id="vid3" src=https://i3.ytimg.com/vi/9VQRyVpdkkM/hqdefault.jpg data="9VQRyVpdkkM"onclick="videoOn(id)"/>
+                <img id="vid4" src=https://i3.ytimg.com/vi/ltyJhg4ezaM/hqdefault.jpg data="ltyJhg4ezaM"onclick="videoOn(id)"/>
+            </div>
+            <div id="vidoverlay" onclick="off(id)">
+                <iframe id="vid" height=315px width=560px frameborder="0"></iframe>
             </div>
         </div>
+        <button class="scrollToTopBtn">⬆︎</button>
     </body>
+    <script src="js/enlargeOverlay.js"></script>
+    <script src="js/toTopButton.js"></script>
 </html>

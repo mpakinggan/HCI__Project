@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <ul>
-        <li><a href="text.html">Text</a></li>
-        <li><a href="image.html">Image</a></li>
-        <li><a href="video.html">Video</a></li>
-        <li><a href="table.html">Table</a></li>
-    </ul>
     <head>
         <link rel="stylesheet" href="css/style.css">
     </head>
+    <ul>
+        <li><a class="active" href="text.html">Text</a></li>
+        <li><a href="image.html">Image</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="table.html">Table</a></li>
+        <li><a href="email.html">Email</a></li>
+    </ul>
     <body>
         <div id="tab-content1" class="content">
             <label for="fname">First name:</label><br>
@@ -25,5 +26,7 @@
             <br>
             <button type="submit" value="Done">Done</button>
         </div>
+        <button class="scrollToTopBtn">⬆︎</button>  
     </body>
+    <script src="js/toTopButton.js"></script>
 </html>

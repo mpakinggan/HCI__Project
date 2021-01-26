@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
     <ul>
         <li><a href="text.html">Text</a></li>
         <li><a href="image.html">Image</a></li>
@@ -7,30 +10,16 @@
         <li><a href="table.html">Table</a></li>
         <li><a class="active" href="email.html">Email</a></li>
     </ul>
-    <head>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
     <body>
         <div id="tab-content5" class="content">
             Email:<br>
             <input type="text" id="email" name="email"><br><br>
             <button onclick="checkEmail()">Submit</button>
             <br><br>
-            <p id="displayMessage"></p>
-            <script>
-                function checkEmail() {
-                    var x = document.getElementById("email").value;
-                    var msg;
-                    if(x.indexOf('@') > -1 && (x.endsWith(".com") || x.endsWith(".edu"))) {
-                        msg = "Email successfully recorded.";
-                    } else {
-                        msg = "Invalid email address.";
-                    }
-                    document.getElementById("displayMessage").innerHTML = msg;
-                }
-            </script>                
+            <p id="displayMessage"></p>            
         </div>
         <button class="scrollToTopBtn">⬆︎</button>
-        <script src="toTopButton.js"></script>
     </body>
+    <script src="js/checkEmail.js"></script>
+    <script src="js/toTopButton.js"></script>
 </html>

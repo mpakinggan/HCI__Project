@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
     <ul>
         <li><a href="text.html">Text</a></li>
         <li><a class="active" href="image.html">Image</a></li>
@@ -7,33 +10,24 @@
         <li><a href="table.html">Table</a></li>
         <li><a href="email.html">Email</a></li>
     </ul>
-    <head>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
     <body>
         <div id="tab-content2" class="content">
             <div class="grid-container">
-                <img id="1" src="img/1.png" onclick="on(id)"/>
-                <img id="2" src="img/2.png" onclick="on(id)"/>
-                <img id="3" src="img/3.jpg" onclick="on(id)"/>
-                <img id="4" src="img/4.jpg" onclick="on(id)"/>
-                <img id="5" src="img/5.jpg" onclick="on(id)"/>
-                <img id="6" src="img/6.jpg" onclick="on(id)"/>
+                <img id="1" src="https://cdn.pixabay.com/photo/2013/10/25/20/46/mosaic-200864_1280.jpg" onclick="imageOn(id)"/>
+                <img id="2" src="https://cdn.pixabay.com/photo/2016/09/08/22/43/books-1655783_1280.jpg" onclick="imageOn(id)"/>
+                <img id="3" src="https://cdn.pixabay.com/photo/2018/05/17/11/38/sculpture-3408348_1280.jpg" onclick="imageOn(id)"/>
+                <img id="4" src="https://cdn.pixabay.com/photo/2014/12/15/17/19/monastery-569368_1280.jpg" onclick="imageOn(id)"/>
+                <img id="5" src="https://cdn.pixabay.com/photo/2018/01/28/17/48/gallery-3114279_1280.jpg" onclick="imageOn(id)"/>
+                <img id="6" src="https://cdn.pixabay.com/photo/2017/12/28/17/10/motorcycles-3045706_1280.jpg" onclick="imageOn(id)"/>
+                <img id="7" src="https://cdn.pixabay.com/photo/2018/10/07/14/08/church-3730222_1280.jpg" onclick="imageOn(id)"/>
+                <img id="8" src="https://cdn.pixabay.com/photo/2012/03/03/23/13/art-21600_1280.jpg" onclick="imageOn(id)"/>
             </div>
-            <div id="imgoverlay" onclick="off()">
+            <div id="imgoverlay" onclick="off(id)">
                 <img id="img"/>
             </div>
         </div>
-        <script>
-            function on(id) {
-                document.getElementById("imgoverlay").style.display = "block";
-                document.getElementById("img").src = document.getElementById(id).src;
-            }
-            function off() {
-                document.getElementById("imgoverlay").style.display = "none";
-            }
-        </script>
         <button class="scrollToTopBtn">⬆︎</button>
-        <script src="toTopButton.js"></script>
     </body>
+    <script src="js/enlargeOverlay.js"></script>
+    <script src="js/toTopButton.js"></script>
 </html>

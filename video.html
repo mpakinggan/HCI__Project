@@ -13,35 +13,24 @@
     <body>
         <div id="tab-content3" class="content">
             <div class="grid-container">
-                <video id="1" onclick="on(find(vid1).id)">
-                    <iframe id="vid1" width="560" height="315" src="https://www.youtube.com/embed/d0tU18Ybcvk" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                    </iframe>
-                </video>
-                <!-- <iframe id="1" width="560" height="315" 
-                    src="https://www.youtube.com/embed/d0tU18Ybcvk" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-                    onclick="on(id)">
-                </iframe> -->
-                <iframe id="2" width="560" height="315" 
-                    src="https://www.youtube.com/embed/YvM-pnzRDYE" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-                    onclick="on(id)">
-                </iframe>
-                <iframe id="3" width="560" height="315" 
-                    src="https://www.youtube.com/embed/eKFTSSKCzWA" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-                    onclick="on(id)">
-                </iframe>
+                <img id="vid1" src=https://i3.ytimg.com/vi/d0tU18Ybcvk/hqdefault.jpg data="d0tU18Ybcvk" onclick="on(id)"/>
+                <img id="vid2" src=https://i3.ytimg.com/vi/YvM-pnzRDYE/hqdefault.jpg data="YvM-pnzRDYE"onclick="on(id)"/>
+                <img id="vid3" src=https://i3.ytimg.com/vi/eKFTSSKCzWA/hqdefault.jpg data="eKFTSSKCzWA"onclick="on(id)"/>
             </div>
             <div id="vidoverlay" onclick="off()">
-                <iframe id="vid"></iframe>
+                <iframe id="vid" height=315px width=560px></iframe>
             </div>
         </div>
         <script>
             function on(id) {
                 document.getElementById("vidoverlay").style.display = "block";
-                document.getElementById("vid").src = document.getElementById(id).src;
+                document.getElementById("vid").src = "https://www.youtube.com/embed/" + document.getElementById(id).getAttribute('data');
             }
             function off() {
                 document.getElementById("vidoverlay").style.display = "none";
             }
         </script>
+        <button class="scrollToTopBtn">⬆︎</button>
+        <script src="toTopButton.js"></script>
     </body>
 </html>

@@ -1,6 +1,8 @@
 /*
 Dynamic Image Grid: https://css-tricks.com/planning-for-responsive-images/
 Image Overlay: https://www.w3schools.com/howto/howto_css_modal_images.asp
+Enlarging Video Thumbnail: https://gomakethings.com/how-to-play-a-video-in-full-screen-mode-when-its-thumbnail-is-clicked-with-vanilla-js/
+Scroll-to-top Button: https://css-tricks.com/how-to-make-an-unobtrusive-scroll-to-top-button/#top-of-site
 */
 
 * {
@@ -60,13 +62,13 @@ div.grid-container img {
   height: 100%;
   max-height: 100%;
 }
-div.grid-container video {
-  object-fit: contain;
+div.grid-container div.video {
+  /* object-fit: contain; */
   width: 100%;
   height: 100%;
   max-height: 100%;
 }
-div.grid-container iframe {
+div.video iframe {
   object-fit: contain;
   width: 100%;
   height: 100%;
@@ -110,8 +112,9 @@ div.grid-container iframe {
 #vid {
   position: fixed;
   margin: auto;
-  width: 80%;
-  max-width: 700px;
+  overflow: auto;
+  width: 80vw;
+  height: 45vw;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
@@ -127,4 +130,26 @@ th, td {
   border: 1px solid black;
   padding: 15px;
   text-align: left;
+}
+
+.scrollToTopBtn {
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 48px;
+  width: 48px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all .5s ease
+}
+.showBtn {
+  opacity: 1;
+  transform: translateY(0)
 }

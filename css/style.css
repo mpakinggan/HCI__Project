@@ -24,6 +24,11 @@ li a {
   text-decoration: none;
 }
 
+li a.active {
+  color: #333;
+  background-color: white;
+}
+
 h1 {
   position: relative;
   font-weight: normal;

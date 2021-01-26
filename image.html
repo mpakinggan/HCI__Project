@@ -13,13 +13,25 @@
     <body>
         <div id="tab-content2" class="content">
             <div class="grid-container">
-                <img src="img/1.png"/>
-                <img src="img/2.png"/>
-                <img src="img/3.jpg"/>
-                <img src="img/4.jpg"/>
-                <img src="img/5.jpg"/>
-                <img src="img/6.jpg"/>
+                <img id="1" src="img/1.png" onclick="on(id)"/>
+                <img id="2" src="img/2.png" onclick="on(id)"/>
+                <img id="3" src="img/3.jpg" onclick="on(id)"/>
+                <img id="4" src="img/4.jpg" onclick="on(id)"/>
+                <img id="5" src="img/5.jpg" onclick="on(id)"/>
+                <img id="6" src="img/6.jpg" onclick="on(id)"/>
+            </div>
+            <div id="imgoverlay" onclick="off()">
+                <img id="img"/>
             </div>
         </div>
+        <script>
+            function on(id) {
+                document.getElementById("imgoverlay").style.display = "block";
+                document.getElementById("img").src = document.getElementById(id).src;
+            }
+            function off() {
+                document.getElementById("imgoverlay").style.display = "none";
+            }
+        </script>
     </body>
 </html>
